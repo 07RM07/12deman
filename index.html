@@ -208,6 +208,16 @@
         background: var(--zeer-licht-groen);
     }
 
+    .wedstrijden-table tr.volgende-wedstrijd {
+        background: var(--licht-groen) !important;
+        color: var(--groen);
+        font-weight: 700;
+    }
+
+    .wedstrijden-table tr.volgende-wedstrijd td:first-child {
+        box-shadow: inset 4px 0 0 var(--groen);
+    }
+
     .overview-row {
         cursor: pointer;
     }
@@ -793,7 +803,7 @@
 
                     <tbody>
                         
-                <tr>
+                <tr class="volgende-wedstrijd">
                     <td>1</td>
                     <td>Dinsdag</td>
                     <td>01/09/26</td>
@@ -1022,7 +1032,7 @@
     </div>
 
     <div class="generated-at">
-        31/08/2026 16:00
+        31/08/2026 16:05
     </div>
 
 </div>
