@@ -231,40 +231,39 @@
         align-items: flex-start;
     }
 
+    /* Exact dezelfde spelerskaarten als in de Tkinter-beheerversie:
+       120 x 145 px trui, 2 px groene rand, geen witte binnenruimte
+       en geen afgeronde hoeken. */
     .players-grid {
         display: grid;
-        grid-template-columns: repeat(4, 160px);
+        grid-template-columns: repeat(4, 144px);
         justify-content: center;
         align-content: start;
         gap: 10px 0;
-        max-width: 640px;
+        max-width: 576px;
         width: 100%;
     }
 
     .player-card {
-        width: 160px;
-        min-height: 159px;
-        padding: 2px 20px;
+        width: 124px;
+        height: 149px;
+        padding: 0;
+        justify-self: center;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        background: transparent;
+        align-items: center;
+        background: var(--grijs);
         border: 2px solid var(--groen);
-        border-radius: 16px;
+        border-radius: 0;
+        overflow: hidden;
         cursor: pointer;
-        transition:
-            background 0.15s ease,
-            transform 0.15s ease;
     }
 
-    .player-card:hover {
-        background: var(--zeer-licht-groen);
-        transform: translateY(-2px);
-    }
-
+    .player-card:hover,
     .player-card:focus {
-        outline: 2px solid var(--groen);
-        outline-offset: -2px;
+        background: var(--grijs);
+        transform: none;
+        outline: none;
     }
 
     .player-shirt {
@@ -272,7 +271,7 @@
         width: 120px;
         height: 145px;
         object-fit: contain;
-        background: transparent;
+        background: var(--grijs);
     }
 
     .player-modal-window {
@@ -667,14 +666,14 @@
         }
 
         .players-grid {
-            grid-template-columns: repeat(2, 145px);
-            max-width: 290px;
+            grid-template-columns: repeat(2, 144px);
+            max-width: 288px;
         }
 
         .player-card {
-            width: 145px;
-            padding-left: 12px;
-            padding-right: 12px;
+            width: 124px;
+            height: 149px;
+            padding: 0;
         }
 
         .player-summary {
@@ -1031,7 +1030,7 @@
     </div>
 
     <div class="generated-at">
-        31/08/2026 18:37
+        31/08/2026 18:42
     </div>
 
 </div>
